@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/layout/activity_auth_page.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/layout/activity_sign_in.xml" value="0.1308876811594203" />
         <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/rishu/AndroidStudioProjects/EDPsampleApp/app/src/main/res/layout/content_auth_page.xml" value="0.22" />
       </map>
     </option>
   </component>
