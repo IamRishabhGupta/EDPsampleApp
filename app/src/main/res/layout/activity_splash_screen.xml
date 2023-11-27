@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:orientation="vertical"
     android:background="@drawable/img"
     tools:context=".splashScreen">
 
@@ -34,5 +35,5 @@
         android:layout_marginTop="25dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/coin" />
+        app:lottie_rawRes="@raw/carlottie" />
 </androidx.appcompat.widget.LinearLayoutCompat>
