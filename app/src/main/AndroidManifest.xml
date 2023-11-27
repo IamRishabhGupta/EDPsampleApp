@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.edp" >
+    package="com.example.edp">
 
     <application
         android:allowBackup="true"
@@ -12,25 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EDP"
-        tools:targetApi="31" >
-
+        tools:targetApi="31">
+        <activity
+            android:name=".introActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUP"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
+            android:exported="false" />
         <activity
             android:name=".splashScreen"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
