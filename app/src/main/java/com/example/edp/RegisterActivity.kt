@@ -45,6 +45,7 @@ class RegisterActivity : BaseActivity()
                     val user= user(firebaseUser.uid,name,registeredEmail)
                     FirestoreClass().registerUser(this
                         ,user)
+                    userRegisteredSuccess()
                 } else {
                     Toast.makeText(this, task!!.exception!!.message, Toast.LENGTH_SHORT).show()
                 }

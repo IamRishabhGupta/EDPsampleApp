@@ -42,7 +42,8 @@ class loginActivity :BaseActivity() {
                 .addOnCompleteListener(this) { task ->
                     hideProgressDialog()
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this,UserPage
+                        ::class.java))
                     } else {
                         Log.w("Sign in", "createUserWithEmail:failure", task.exception)
                         Toast.makeText(baseContext, "Authentication failed.",
@@ -69,7 +70,7 @@ class loginActivity :BaseActivity() {
 
     fun signInSuccess(user: user){
         hideProgressDialog()
-        startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this,UserPage::class.java))
         finish()
     }
 }

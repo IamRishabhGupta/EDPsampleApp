@@ -1,5 +1,6 @@
 package com.example.edp
 
+import android.app.Activity
 import android.util.Log
 import com.example.edp.Constants.Companion.USERS
 import com.google.firebase.auth.FirebaseAuth
@@ -29,4 +30,51 @@ class FirestoreClass {
         }
         return currentUserId
     }
+    fun loadUserData(activity: Activity)
+    {
+        mFireStore.collection("users")
+            .document(getCurrentUserId()).get().addOnSuccessListener {document->
+                val loggedInUser=document.toObject(user::class.java)!!
+                when(activity)
+                {
+                    is loginActivity ->{
+                        activity.signInSuccess(loggedInUser)
+                    }
+
+//                    is MainActivity ->
+//                    {
+//                        activity.updateNavigationUserDetails(loggedInUser)
+//                    }
+                    is InfoActivity->{
+                        activity.setUserDataInUI(loggedInUser)
+                    }
+                }
+            }.addOnFailureListener{
+
+                    e->
+                when(activity)
+                {
+//                    is MainActivity->
+//                    {
+//                        activity.hideProgressDialog()
+//                    }
+
+                    is loginActivity->
+                    {
+                        activity.hideProgressDialog()
+                    }
+                }
+
+
+
+                Log.e("FirestoreSignInuser","error in writing document ")
+            }
+    }
+
+
+
+
+
+
+
 }

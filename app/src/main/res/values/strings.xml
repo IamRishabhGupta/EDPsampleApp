@@ -6,7 +6,15 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="my_map_api_key">AIzaSyA9zqyxAzjuF_bUV1E_TIxQIw8Y3lE9L6Y</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="home">Home</string>
+    <string name="addFriend">Add Friend</string>
+    <string name="addGroup">Add Group</string>
+    <string name="emailText">Enter Email of New Friend </string>
+    <string name="stats">Stats</string>
+    <string name="New">New</string>
 </resources>
