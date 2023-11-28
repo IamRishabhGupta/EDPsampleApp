@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "968249905277",
+    "project_id": "edpsample-9c403",
+    "storage_bucket": "edpsample-9c403.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968249905277:android:31ccdf7ef2b44ff97da114",
+        "android_client_info": {
+          "package_name": "com.example.edp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTsIJmOYcJW4ZLCytHdAJnE1xutdj6Zns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,11 +14,12 @@
         android:theme="@style/Theme.EDP"
         tools:targetApi="31">
         <activity
-            android:name=".introActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUP"
+            android:name=".introActivity"
             android:exported="false" />
+
         <activity
             android:name=".loginActivity"
             android:exported="false" />
