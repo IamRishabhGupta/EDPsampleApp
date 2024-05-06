@@ -2,13 +2,12 @@ package com.example.edp
 
 import android.app.Activity
 import android.util.Log
-import com.example.edp.Constants.Companion.USERS
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.core.Constants
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
-class FirestoreClass {
+class
+FirestoreClass {
     private val mFireStore = FirebaseFirestore.getInstance()
 
     //Authentication Logic
@@ -18,12 +17,12 @@ class FirestoreClass {
             SetOptions.merge()
         ).addOnSuccessListener {
             activity.userRegisteredSuccess()
-        }.addOnFailureListener { e ->
+        }.addOnFailureListener {
 //            Log.e(activity.javaClass.simpleName, e.toString())
         }
     }
-    fun getCurrentUserId(): String {
-        var currentUser = FirebaseAuth.getInstance().currentUser
+    private fun getCurrentUserId(): String {
+        val currentUser = FirebaseAuth.getInstance().currentUser
         var currentUserId = ""
         if (currentUser != null) {
             currentUserId = currentUser.uid
@@ -51,8 +50,8 @@ class FirestoreClass {
                 }
             }.addOnFailureListener{
 
-                    e->
-                when(activity)
+
+            when(activity)
                 {
 //                    is MainActivity->
 //                    {
