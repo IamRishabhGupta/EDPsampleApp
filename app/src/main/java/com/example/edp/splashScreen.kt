@@ -20,7 +20,7 @@ class splashScreen : AppCompatActivity() {
 //                startActivity(Intent(this, MainActivity::class.java))
 //            }else{
                 Log.e("aa gaya", "2 Four")
-                startActivity(Intent(this, introActivity::class.java))
+                startActivity(Intent(this, datav::class.java))
 //            }
             finish()
         },3000)

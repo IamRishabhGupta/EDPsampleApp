@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,10 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EDP"
         tools:targetApi="31">
+        <activity
+            android:name=".datav"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAawUHLWa7ml0HmlCngp_L9-F9tDxpVPbc"/>
-
+            android:value="AIzaSyAawUHLWa7ml0HmlCngp_L9-F9tDxpVPbc" />
 
         <activity
             android:name=".mapActivity"
