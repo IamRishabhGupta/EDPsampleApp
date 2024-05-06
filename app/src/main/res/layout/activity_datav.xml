@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    android:gravity="center_vertical|center_horizontal">
 
     <!-- TextView for displaying latitude -->
     <TextView
@@ -11,8 +15,8 @@
         android:text="Latitude:"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display latitude value -->
     <TextView
@@ -22,8 +26,8 @@
         android:text="Latitude value"
         android:textSize="16sp"
         android:layout_below="@id/latitudeLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView for displaying longitude -->
     <TextView
@@ -34,8 +38,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/latitudeTextView"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display longitude value -->
     <TextView
@@ -45,8 +49,8 @@
         android:text="Longitude value"
         android:textSize="16sp"
         android:layout_below="@id/longitudeLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView for displaying time -->
     <TextView
@@ -57,8 +61,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/longitudeTextView"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display time value -->
     <TextView
@@ -68,8 +72,8 @@
         android:text="Time value"
         android:textSize="16sp"
         android:layout_below="@id/timeLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView for displaying weather condition -->
     <TextView
@@ -80,8 +84,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/timeTextView"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display weather condition value -->
     <TextView
@@ -91,8 +95,8 @@
         android:text="Weather condition value"
         android:textSize="16sp"
         android:layout_below="@id/weatherConditionLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView for displaying nearby places -->
     <TextView
@@ -103,8 +107,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/weatherConditionTextView"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display nearby places value -->
     <TextView
@@ -114,8 +118,8 @@
         android:text="Nearby places value"
         android:textSize="16sp"
         android:layout_below="@id/nearbyPlacesLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView for displaying visibility -->
     <TextView
@@ -126,8 +130,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/nearbyPlacesTextView"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
     <!-- TextView to display visibility value -->
     <TextView
@@ -137,7 +141,7 @@
         android:text="Visibility value"
         android:textSize="16sp"
         android:layout_below="@id/visibilityLabel"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>
