@@ -58,17 +58,20 @@ class datav : AppCompatActivity() {
     }
 
     private fun updateUI(myData: MyData) {
-        Log.e("data", myData.toString())
-        // Update UI components with the second block of data
-        binding?.latitudeTextView?.text = "Latitude: ${myData.latitude}"
-        binding?.longitudeTextView?.text = "Longitude: ${myData.longitude}"
+        val formattedLatitude = String.format("%.8f", myData.latitude.toDouble())
+        val formattedLongitude = String.format("%.8f", myData.longitude.toDouble())
+        val truncatedSpeed = String.format("%.2f", myData.speed.toDouble())
+        val truncatedPWM = String.format("%.2f", myData.pwm.toDouble())
+
+        binding?.latitudeTextView?.text = "Latitude: $formattedLatitude"
+        binding?.longitudeTextView?.text = "Longitude: $formattedLongitude"
         binding?.timeTextView?.text = "Time: ${myData.time}"
         binding?.weatherConditionTextView?.text = "Weather Condition: ${myData.weatherCondition}"
         binding?.nearbyPlacesTextView?.text = "Nearby Places: ${myData.nearbyPlaces}"
         binding?.visibilityTextView?.text = "Visibility: ${myData.visibility}"
-        binding?.speedTextView?.text = "Speed: ${myData.speed}" // Add this line to update speed
-        binding?.pwmTextView?.text = "PWM: ${myData.pwm}" // Add this line to update PWM
-        binding?.vTextView?.text = "__v: ${myData.v}" // Add this line to update __v
+        binding?.speedTextView?.text = "Speed: $truncatedSpeed km/h"
+        binding?.pwmTextView?.text = "PWM: $truncatedPWM"
         binding?.locationTextView?.text = "Location: ${myData.location}"
     }
+
 }

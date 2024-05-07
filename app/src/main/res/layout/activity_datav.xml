@@ -11,14 +11,12 @@
         android:paddingBottom="32dp"
         android:gravity="center_vertical|center_horizontal">
 
-
-
         <!-- TextView for displaying latitude -->
         <TextView
             android:id="@+id/latitudeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Latitude:"
+            android:text="Latitude (°)"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -41,7 +39,7 @@
             android:id="@+id/longitudeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Longitude:"
+            android:text="Longitude (°)"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/latitudeTextView"
@@ -65,7 +63,7 @@
             android:id="@+id/timeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time:"
+            android:text="Time"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/longitudeTextView"
@@ -89,7 +87,7 @@
             android:id="@+id/weatherConditionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weather Condition:"
+            android:text="Weather Condition"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/timeTextView"
@@ -113,7 +111,7 @@
             android:id="@+id/nearbyPlacesLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nearby Places:"
+            android:text="Nearby Places"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/weatherConditionTextView"
@@ -137,7 +135,7 @@
             android:id="@+id/visibilityLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Visibility:"
+            android:text="Visibility (m)"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/nearbyPlacesTextView"
@@ -160,7 +158,7 @@
             android:id="@+id/speedLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Speed:"
+            android:text="Speed (km/h)"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/visibilityTextView"
@@ -184,7 +182,7 @@
             android:id="@+id/pwmLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PWM:"
+            android:text="PWM"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/speedTextView"
@@ -203,54 +201,29 @@
             android:layout_marginTop="16dp"
             android:textColor="@android:color/white"/>
 
-        <!-- TextView for displaying __v -->
+        <!-- TextView for displaying location -->
         <TextView
-            android:id="@+id/vLabel"
+            android:id="@+id/locationlabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="__v:"
+            android:text="Location"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@id/pwmTextView"
             android:layout_marginTop="16dp"
             android:textColor="@android:color/white"/>
 
-        <!-- TextView to display __v value -->
-        <TextView
-            android:id="@+id/vTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="__v value"
-            android:textSize="16sp"
-            android:layout_below="@id/vLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
-
-
-        <TextView
-            android:id="@+id/locationlabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/vTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
-
-
+        <!-- TextView to display location value -->
         <TextView
             android:id="@+id/locationTextView"
             android:background="@drawable/border_white_with_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="location"
+            android:text="Location value"
             android:textSize="16sp"
             android:layout_below="@id/locationlabel"
             android:layout_marginTop="16dp"
             android:textColor="@android:color/white"/>
-
 
     </RelativeLayout>
 </ScrollView>
