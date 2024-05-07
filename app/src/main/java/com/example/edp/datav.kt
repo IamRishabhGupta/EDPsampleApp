@@ -64,5 +64,8 @@ class datav : AppCompatActivity() {
         binding?.weatherConditionTextView?.text = "Weather Condition: ${myData.weatherCondition}"
         binding?.nearbyPlacesTextView?.text = "Nearby Places: ${myData.nearbyPlaces}"
         binding?.visibilityTextView?.text = "Visibility: ${myData.visibility}"
+        binding?.speedTextView?.text = "Speed: ${myData.speed}" // Add this line to update speed
+        binding?.pwmTextView?.text = "PWM: ${myData.pwm}" // Add this line to update PWM
+        binding?.vTextView?.text = "__v: ${myData.v}" // Add this line to update __v
     }
 }
