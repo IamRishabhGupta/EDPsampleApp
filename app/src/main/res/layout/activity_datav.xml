@@ -1,229 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img">
 
-    <RelativeLayout
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/img"
-        android:paddingTop="32dp"
-        android:paddingBottom="32dp"
-        android:gravity="center_vertical|center_horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- TextView for displaying latitude -->
-        <TextView
-            android:id="@+id/latitudeLabel"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Latitude (°)"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
-        <!-- TextView to display latitude value -->
-        <TextView
-            android:id="@+id/latitudeTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
+
+                <!-- Location -->
+                <TextView
+                    android:id="@+id/locationlabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Location"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Location value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        <!-- Card for latitude and longitude -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Latitude value"
-            android:textSize="16sp"
-            android:layout_below="@id/latitudeLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@drawable/gradient_background">
 
-        <!-- TextView for displaying longitude -->
-        <TextView
-            android:id="@+id/longitudeLabel"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
+
+                <!-- Latitude -->
+                <TextView
+                    android:id="@+id/latitudeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Latitude (°)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/latitudeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Latitude value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <!-- Longitude -->
+                <TextView
+                    android:id="@+id/longitudeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Longitude (°)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/longitudeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Longitude value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for time -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Longitude (°)"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/latitudeTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
-        <!-- TextView to display longitude value -->
-        <TextView
-            android:id="@+id/longitudeTextView"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
+
+                <!-- Time -->
+                <TextView
+                    android:id="@+id/timeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for weather condition -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Longitude value"
-            android:textSize="16sp"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_below="@id/longitudeLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
-        <!-- TextView for displaying time -->
-        <TextView
-            android:id="@+id/timeLabel"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
+
+                <!-- Weather Condition -->
+                <TextView
+                    android:id="@+id/weatherConditionLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weather Condition"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/weatherConditionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weather condition value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- Card for visibility -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Time"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/longitudeTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
-        <!-- TextView to display time value -->
-        <TextView
-            android:id="@+id/timeTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
+
+                <!-- Visibility -->
+                <TextView
+                    android:id="@+id/visibilityLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Visibility (m)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/visibilityTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Visibility value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card for speed -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Time value"
-            android:textSize="16sp"
-            android:layout_below="@id/timeLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
-        <!-- TextView for displaying weather condition -->
-        <TextView
-            android:id="@+id/weatherConditionLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weather Condition"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/timeTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/gradient_background">
 
-        <!-- TextView to display weather condition value -->
-        <TextView
-            android:id="@+id/weatherConditionTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weather condition value"
-            android:textSize="16sp"
-            android:layout_below="@id/weatherConditionLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+                <!-- Speed -->
+                <TextView
+                    android:id="@+id/speedLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Speed (km/h)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
 
-        <!-- TextView for displaying nearby places -->
-        <TextView
-            android:id="@+id/nearbyPlacesLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nearby Places"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/weatherConditionTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/speedTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Speed value"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
 
-        <!-- TextView to display nearby places value -->
-        <TextView
-            android:id="@+id/nearbyPlacesTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nearby places value"
-            android:textSize="16sp"
-            android:layout_below="@id/nearbyPlacesLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <!-- TextView for displaying visibility -->
-        <TextView
-            android:id="@+id/visibilityLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Visibility (m)"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/nearbyPlacesTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+        <!-- Card for PWM -->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:elevation="4dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            >-->
 
-        <!-- TextView to display visibility value -->
-        <TextView
-            android:id="@+id/visibilityTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Visibility value"
-            android:textSize="16sp"
-            android:layout_below="@id/visibilityLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="16dp"-->
+<!--                android:background="@drawable/gradient_background">-->
 
-        <TextView
-            android:id="@+id/speedLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Speed (km/h)"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/visibilityTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+<!--                &lt;!&ndash; PWM &ndash;&gt;-->
+<!--                <TextView-->
+<!--                    android:id="@+id/pwmLabel"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="PWM"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
 
-        <!-- TextView to display speed value -->
-        <TextView
-            android:id="@+id/speedTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Speed value"
-            android:textSize="16sp"
-            android:layout_below="@id/speedLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/pwmTextView"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="PWM value"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textColor="@android:color/black"/>-->
 
-        <!-- TextView for displaying pwm -->
-        <TextView
-            android:id="@+id/pwmLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PWM"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/speedTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
 
-        <!-- TextView to display pwm value -->
-        <TextView
-            android:id="@+id/pwmTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PWM value"
-            android:textSize="16sp"
-            android:layout_below="@id/pwmLabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+        <!-- Card for location -->
 
-        <!-- TextView for displaying location -->
-        <TextView
-            android:id="@+id/locationlabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/pwmTextView"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
 
-        <!-- TextView to display location value -->
-        <TextView
-            android:id="@+id/locationTextView"
-            android:background="@drawable/border_white_with_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location value"
-            android:textSize="16sp"
-            android:layout_below="@id/locationlabel"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white"/>
+        <!-- Repeat the above CardView layout for other data entries -->
 
-    </RelativeLayout>
+    </LinearLayout>
+
 </ScrollView>

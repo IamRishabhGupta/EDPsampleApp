@@ -11,7 +11,10 @@ package com.example.edp
 //import retrofit2.Response
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 //import kotlinx.android.synthetic.main.activity_datav.*
 import retrofit2.Call
@@ -23,13 +26,35 @@ import com.example.edp.databinding.ActivityDatavBinding
 class datav : AppCompatActivity() {
 
     private var binding: ActivityDatavBinding? = null
+    private val updateInterval = 65 * 1000L // 65 seconds in milliseconds
+    private val handler = Handler(Looper.getMainLooper())
+    private val toastInterval = 62 * 1000 // 30 seconds in milliseconds
+
+    private val toastRunnable = object : Runnable {
+        override fun run() {
+            showToast("Hello, this is your toast message!")
+            handler.postDelayed(this, toastInterval.toLong())
+        }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        // Stop the handler when the activity is destroyed to avoid memory leaks
+        handler.removeCallbacks(toastRunnable)
+    }
+
+    private fun showToast(message: String) {
+        fetchDataFromApi()
+    }
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDatavBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
         fetchDataFromApi()
+        handler.postDelayed(toastRunnable, toastInterval.toLong())
     }
 
     private fun fetchDataFromApi() {
@@ -49,6 +74,7 @@ class datav : AppCompatActivity() {
                 } else {
                     // Handle unsuccessful response
                 }
+                scheduleNextUpdate()
             }
 
             override fun onFailure(call: Call<List<MyData>>, t: Throwable) {
@@ -67,11 +93,16 @@ class datav : AppCompatActivity() {
         binding?.longitudeTextView?.text = "Longitude: $formattedLongitude"
         binding?.timeTextView?.text = "Time: ${myData.time}"
         binding?.weatherConditionTextView?.text = "Weather Condition: ${myData.weatherCondition}"
-        binding?.nearbyPlacesTextView?.text = "Nearby Places: ${myData.nearbyPlaces}"
+//        binding?.nearbyPlacesTextView?.text = "Nearby Places: ${myData.nearbyPlaces}"
         binding?.visibilityTextView?.text = "Visibility: ${myData.visibility}"
         binding?.speedTextView?.text = "Speed: $truncatedSpeed km/h"
-        binding?.pwmTextView?.text = "PWM: $truncatedPWM"
+//        binding?.pwmTextView?.text = "PWM: $truncatedPWM"
         binding?.locationTextView?.text = "Location: ${myData.location}"
+    }
+
+    private fun scheduleNextUpdate() {
+        // Schedule the next update after the specified interval
+        handler.postDelayed({ fetchDataFromApi() }, updateInterval)
     }
 
 }

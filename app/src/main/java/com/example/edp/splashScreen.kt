@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+//import datav
 
 class splashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class splashScreen : AppCompatActivity() {
 //                startActivity(Intent(this, MainActivity::class.java))
 //            }else{
                 Log.e("aa gaya", "2 Four")
-                startActivity(Intent(this, datav::class.java))
+                startActivity(Intent(this,datav::class.java)    )
 //            }
             finish()
         },3000)
