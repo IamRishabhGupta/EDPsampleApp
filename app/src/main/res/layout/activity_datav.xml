@@ -11,6 +11,8 @@
         android:paddingBottom="32dp"
         android:gravity="center_vertical|center_horizontal">
 
+
+
         <!-- TextView for displaying latitude -->
         <TextView
             android:id="@+id/latitudeLabel"
@@ -224,6 +226,31 @@
             android:layout_below="@id/vLabel"
             android:layout_marginTop="16dp"
             android:textColor="@android:color/white"/>
+
+
+        <TextView
+            android:id="@+id/locationlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/vTextView"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"/>
+
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:background="@drawable/border_white_with_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:textSize="16sp"
+            android:layout_below="@id/locationlabel"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"/>
+
 
     </RelativeLayout>
 </ScrollView>

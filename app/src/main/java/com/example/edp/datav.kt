@@ -11,6 +11,7 @@ package com.example.edp
 //import retrofit2.Response
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 //import kotlinx.android.synthetic.main.activity_datav.*
 import retrofit2.Call
@@ -39,7 +40,7 @@ class datav : AppCompatActivity() {
                     val dataList: List<MyData>? = response.body()
                     // Check if dataList is not null and contains at least two elements
                     if (dataList != null && dataList.size >= 2) {
-                        val secondBlock = dataList[1] // Access the second element (index 1)
+                        val secondBlock = dataList.last() // Access the second element (index 1)
                         // Now you can use the secondBlock object as needed
                         updateUI(secondBlock)
                     } else {
@@ -57,6 +58,7 @@ class datav : AppCompatActivity() {
     }
 
     private fun updateUI(myData: MyData) {
+        Log.e("data", myData.toString())
         // Update UI components with the second block of data
         binding?.latitudeTextView?.text = "Latitude: ${myData.latitude}"
         binding?.longitudeTextView?.text = "Longitude: ${myData.longitude}"
@@ -67,5 +69,6 @@ class datav : AppCompatActivity() {
         binding?.speedTextView?.text = "Speed: ${myData.speed}" // Add this line to update speed
         binding?.pwmTextView?.text = "PWM: ${myData.pwm}" // Add this line to update PWM
         binding?.vTextView?.text = "__v: ${myData.v}" // Add this line to update __v
+        binding?.locationTextView?.text = "Location: ${myData.location}"
     }
 }

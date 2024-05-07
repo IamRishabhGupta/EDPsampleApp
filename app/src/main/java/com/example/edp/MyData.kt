@@ -13,5 +13,6 @@ data class MyData(
     @SerializedName("visibility") val visibility: String,
     @SerializedName("speed") val speed: String,
     @SerializedName("pwm") val pwm: String,
-    @SerializedName("__v") val v: Int
+    @SerializedName("__v") val v: Int,
+    @SerializedName("location") val location: String
 )
